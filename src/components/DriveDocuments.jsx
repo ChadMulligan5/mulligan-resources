@@ -1,15 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { listSubFolders, listFiles, cleanName, getFileType, previewUrl, downloadUrl, viewUrl } from '../services/driveService';
+import { listSubFolders, listFiles, cleanName } from '../services/driveService';
 import MpesaPaymentModal from './MpesaPaymentModal';
-
-const TYPE_CONFIG = {
-  pdf:  { label:'PDF',  color:'#E86060', bg:'rgba(232,96,96,.12)',  border:'rgba(232,96,96,.25)',  icon:'bi-file-earmark-pdf-fill' },
-  docx: { label:'WORD', color:'#6DA8F5', bg:'rgba(109,168,245,.1)', border:'rgba(109,168,245,.25)',icon:'bi-file-earmark-word-fill' },
-  html: { label:'HTML', color:'#3DBF8A', bg:'rgba(61,191,138,.1)',  border:'rgba(61,191,138,.25)', icon:'bi-file-earmark-code-fill' },
-  pptx: { label:'PPT',  color:'#D4A843', bg:'rgba(212,168,67,.12)', border:'rgba(212,168,67,.25)', icon:'bi-file-earmark-ppt-fill' },
-  xlsx: { label:'XLS',  color:'#A882DD', bg:'rgba(168,130,221,.12)',border:'rgba(168,130,221,.25)',icon:'bi-file-earmark-excel-fill' },
-  file: { label:'FILE', color:'#A8B8C8', bg:'rgba(168,184,200,.1)', border:'rgba(168,184,200,.2)', icon:'bi-file-earmark-fill' },
-};
 
 const CAT_ICONS = {
   'Notes & Summaries': 'bi-journal-text',

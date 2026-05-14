@@ -407,7 +407,7 @@ export default function MpesaPaymentModal({ doc, onClose, onDownload }) {
   const [phone, setPhone]       = useState('');
   const [focused, setFocused]   = useState(false);
   const [receipt, setReceipt]   = useState(null);
-  const [dotIdx, setDotIdx]     = useState(0);
+  const [dotIdx, setDotIdx]     = useState(0); // eslint-disable-line no-unused-vars
   const inputRef                = useRef(null);
 
   // Animate the waiting dots
@@ -443,7 +443,7 @@ export default function MpesaPaymentModal({ doc, onClose, onDownload }) {
     setPhone(val);
   }
 
-  const isValidPhone = phone.length === 9 && phone.startsWith('7') || phone.startsWith('1');
+  const isValidPhone = (phone.length === 9 && phone.startsWith('7')) || phone.startsWith('1');
 
   const docName = doc?.title || doc?.name || 'Document';
   const docType = (doc?.type || 'file').toUpperCase();

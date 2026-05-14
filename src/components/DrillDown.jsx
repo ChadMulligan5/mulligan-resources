@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LEVELS, SUBJECT_ICONS, CATEGORIES, TEACHER_CATEGORIES, getDocuments, downloadUrl } from '../data';
+import { LEVELS, SUBJECT_ICONS, CATEGORIES, TEACHER_CATEGORIES, getDocuments } from '../data';
 import { DriveSubjectPanel } from './DriveDocuments';
 import MpesaPaymentModal from './MpesaPaymentModal';
 
