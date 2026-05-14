@@ -1,0 +1,162 @@
+// ─────────────────────────────────────────────────────────
+//  data.js  —  Mulligan Resource Center
+//  All CBE levels, grades, subjects, categories & documents
+// ─────────────────────────────────────────────────────────
+
+export const LEVELS = {
+  'pre-primary': {
+    label: 'Pre-Primary', icon: '🌟', color: 'lc-pink',
+    grades: [
+      { id:'pp1', num:'PP1', label:'Pre-Primary 1', age:'Age 4–5', driveId:'1Vz0k6AhnTaAhJJsostNFGVDGFXjkttLH', subjects:['Mathematical Activities','Language Activities','Environmental Activities','Psychomotor & Creative Activities','Religious Education & Life Skills','Digital Literacy'] },
+      { id:'pp2', num:'PP2', label:'Pre-Primary 2', age:'Age 5–6', driveId:'1dTc2_ZOKtDs8JKqJEkNElcWACYFu1VYo', subjects:['Mathematical Activities','Language Activities','Environmental Activities','Psychomotor & Creative Activities','Religious Education & Life Skills','Digital Literacy'] },
+    ],
+  },
+  'lower-primary': {
+    label: 'Lower Primary', icon: '📗', color: 'lc-green',
+    grades: [
+      { id:'g1', num:'1', label:'Grade 1', age:'Age 6–7', subjects:['Literacy Activities','Kiswahili Language Activities','Mathematical Activities','Environmental Activities','Creative Arts','Religious Education'] },
+      { id:'g2', num:'2', label:'Grade 2', age:'Age 7–8', subjects:['Literacy Activities','Kiswahili Language Activities','Mathematical Activities','Environmental Activities','Creative Arts','Religious Education'] },
+      { id:'g3', num:'3', label:'Grade 3', age:'Age 8–9', subjects:['Literacy Activities','Kiswahili Language Activities','Mathematical Activities','Environmental Activities','Creative Arts','Religious Education'] },
+    ],
+  },
+  'upper-primary': {
+    label: 'Upper Primary', icon: '📘', color: 'lc-blue',
+    grades: [
+      { id:'g4', num:'4', label:'Grade 4', age:'Age 10–11', subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Religious Education','Creative Arts','Physical & Health Education'] },
+      { id:'g5', num:'5', label:'Grade 5', age:'Age 11–12', subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Religious Education','Creative Arts','Physical & Health Education'] },
+      { id:'g6', num:'6', label:'Grade 6', age:'Age 12–13', subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Religious Education','Creative Arts','Physical & Health Education'] },
+    ],
+  },
+  'junior-secondary': {
+    label: 'Junior Secondary', icon: '📙', color: 'lc-gold',
+    grades: [
+      { id:'g7', num:'7', label:'Grade 7', age:'Age 13–14', subjects:['English','Kiswahili','Mathematics','Integrated Science','Social Studies','Business Studies','Agriculture','Computer Science','Creative Arts','Physical Education','Religious Education','Foreign Language'] },
+      { id:'g8', num:'8', label:'Grade 8', age:'Age 14–15', subjects:['English','Kiswahili','Mathematics','Integrated Science','Social Studies','Business Studies','Agriculture','Computer Science','Creative Arts','Physical Education','Religious Education','Foreign Language'] },
+      { id:'g9', num:'9', label:'Grade 9', age:'Age 15–16', subjects:['English','Kiswahili','Mathematics','Integrated Science','Social Studies','Business Studies','Agriculture','Computer Science','Creative Arts','Physical Education','Religious Education','Foreign Language'] },
+    ],
+  },
+  'high-school': {
+    label: 'High School', icon: '📓', color: 'lc-purple',
+    grades: [
+      { id:'g10', num:'10', label:'Grade 10', age:'Age 16–17', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
+      { id:'g11', num:'11', label:'Grade 11', age:'Age 17–18', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
+      { id:'g12', num:'12', label:'Grade 12', age:'Age 18–19', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
+    ],
+  },
+  'exam-revision': {
+    label: 'Exam Revision', icon: '🏆', color: 'lc-coral',
+    grades: [
+      { id:'kcpe',  num:'', label:'KCPE',  age:'Primary Exit Exam',  subjects:['English','Kiswahili','Mathematics','Science','Social Studies & CRE'] },
+      { id:'kpsea', num:'', label:'KPSEA', age:'Grade 6 Exit Exam',  subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Creative Arts','Physical & Health Education'] },
+      { id:'kjsea', num:'', label:'KJSEA', age:'Grade 9 Exit Exam',  subjects:['English','Kiswahili','Mathematics','Integrated Science','Social Studies','Business Studies','Agriculture','Computer Science','Creative Arts','Physical Education'] },
+      { id:'kcse',  num:'', label:'KCSE',  age:'Secondary Exit Exam', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Studies'] },
+    ],
+  },
+  'teacher-resources': {
+    label: 'Teacher Resources', icon: '👩‍🏫', color: 'lc-teal',
+    grades: [
+      { id:'tr-pp', num:'', label:'Pre-Primary',      age:'PP1 & PP2',   subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','Activity Sheets','KICD Syllabus'] },
+      { id:'tr-lp', num:'', label:'Lower Primary',    age:'Grade 1–3',   subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','Activity Sheets','KICD Syllabus','Record of Work'] },
+      { id:'tr-up', num:'', label:'Upper Primary',    age:'Grade 4–6',   subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','Homework Sheets','KICD Syllabus','Record of Work'] },
+      { id:'tr-js', num:'', label:'Junior Secondary', age:'Grade 7–9',   subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','CAT Papers','KICD Syllabus','Record of Work','Remedial Activities'] },
+      { id:'tr-ss', num:'', label:'High School',      age:'Grade 10–12', subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','CAT Papers','KICD Syllabus','Record of Work','KCSE Prediction Papers'] },
+    ],
+  },
+};
+
+export const SUBJECT_ICONS = {
+  'Literacy Activities':'📝','Kiswahili Language Activities':'🗣️','Mathematical Activities':'🔢',
+  'Environmental Activities':'🌿','Creative Arts':'🎨','Religious Education':'✝️',
+  'English':'📖','Kiswahili':'🗣️','Mathematics':'🔢','Science & Technology':'🔬',
+  'Social Studies':'🌍','Business Studies':'💼','Agriculture':'🌱','Computer Science':'💻',
+  'Physical & Health Education':'🏃','Physical Education':'🏃','Integrated Science':'⚗️',
+  'Foreign Language':'🌐','Music':'🎵','Art & Design':'🖌️',
+  'History':'📜','Geography':'🗺️','Biology':'🧬','Chemistry':'⚗️','Physics':'🔭',
+  'Social Studies & CRE':'🌍','Computer Studies':'💻',
+  'Language Activities':'🗣️','Psychomotor & Creative Activities':'🤸',
+  'Religious Education & Life Skills':'✝️','Digital Literacy':'💻',
+  'Schemes of Work':'📅','Lesson Plans':'📋','Assessment Rubrics':'📊',
+  'Activity Sheets':'📄','KICD Syllabus':'📕','Record of Work':'📒',
+  'Homework Sheets':'✏️','CAT Papers':'📝','Remedial Activities':'🔄',
+  'KCSE Prediction Papers':'🎯','Science':'🔬',
+};
+
+export const CATEGORIES = [
+  { icon:'📝', name:'Notes & Summaries', desc:'Comprehensive topic-by-topic notes written by experienced teachers.' },
+  { icon:'📋', name:'Past Papers',       desc:'Authentic past exam papers from previous years to practise with.' },
+  { icon:'✅', name:'Marking Schemes',   desc:'Detailed marking guides and model answers for all past papers.' },
+  { icon:'📊', name:'Revision Sets',     desc:'Targeted topic revision packs with exercises and answers.' },
+];
+
+export const TEACHER_CATEGORIES = [
+  { icon:'📅', name:'Schemes of Work',    desc:'Term-by-term schemes covering all strands and competencies per subject.' },
+  { icon:'📋', name:'Lesson Plans',        desc:'Ready-to-use lesson plans with objectives, activities and assessments.' },
+  { icon:'📊', name:'Assessment Rubrics',  desc:'Standardised rubrics for continuous assessment tasks (CATs).' },
+  { icon:'📄', name:'Activity Sheets',     desc:'Printable activity and homework sheets for learners.' },
+];
+
+// ─── DOCUMENT DATABASE ───────────────────────────────────
+// HOW TO ADD A FILE:
+//   1. Upload to Google Drive
+//   2. Share → "Anyone with the link" → Copy link
+//   3. Add an entry below matching level, grade, subject, category
+// ─────────────────────────────────────────────────────────
+export const DOCUMENTS = [
+  { level:'lower-primary', grade:'g1', subject:'Literacy Activities', category:'Notes & Summaries',
+    title:'Grade 1 Literacy – Term 1 Notes', type:'pdf', size:'1.2 MB', date:'Jan 2026', free:true,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'lower-primary', grade:'g1', subject:'Literacy Activities', category:'Past Papers',
+    title:'Grade 1 Literacy – End of Term 1 Assessment', type:'pdf', size:'540 KB', date:'Mar 2026', free:true,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'lower-primary', grade:'g1', subject:'Literacy Activities', category:'Marking Schemes',
+    title:'Grade 1 Literacy – Term 1 Marking Guide', type:'pdf', size:'320 KB', date:'Mar 2026', free:true,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'lower-primary', grade:'g1', subject:'Literacy Activities', category:'Revision Sets',
+    title:'Grade 1 Literacy – Holiday Revision Pack', type:'docx', size:'780 KB', date:'Apr 2026', free:false,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'lower-primary', grade:'g1', subject:'Mathematical Activities', category:'Notes & Summaries',
+    title:'Grade 1 Maths – Numbers 1 to 100', type:'pdf', size:'1.4 MB', date:'Feb 2026', free:true,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'lower-primary', grade:'g1', subject:'Mathematical Activities', category:'Notes & Summaries',
+    title:'Grade 1 Maths – Shapes & Patterns', type:'pdf', size:'860 KB', date:'Mar 2026', free:true,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'lower-primary', grade:'g1', subject:'Mathematical Activities', category:'Past Papers',
+    title:'Grade 1 Maths – CAT 1 Assessment Paper', type:'pdf', size:'420 KB', date:'Mar 2026', free:true,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'lower-primary', grade:'g1', subject:'Mathematical Activities', category:'Revision Sets',
+    title:'Grade 1 Maths – Full Year Revision Booklet', type:'docx', size:'1.1 MB', date:'May 2026', free:false,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'exam-revision', grade:'kcse', subject:'Mathematics', category:'Past Papers',
+    title:'KCSE Mathematics 2023 – Paper 1 & 2', type:'pdf', size:'2.2 MB', date:'Jan 2026', free:false,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'exam-revision', grade:'kcse', subject:'Biology', category:'Past Papers',
+    title:'KCSE Biology 2023 – Full Paper', type:'pdf', size:'1.9 MB', date:'Jan 2026', free:false,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'exam-revision', grade:'kcse', subject:'Biology', category:'Marking Schemes',
+    title:'KCSE Biology 2023 – Official Marking Scheme', type:'pdf', size:'880 KB', date:'Jan 2026', free:false,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+  { level:'exam-revision', grade:'kcse', subject:'English', category:'Notes & Summaries',
+    title:'KCSE English – Essay Writing Mastery Guide', type:'pdf', size:'1.4 MB', date:'Mar 2026', free:true,
+    driveLink:'https://drive.google.com/file/d/1GLpKQfTVjXar_-yz4adH5o4tQjsHYWj_/view?usp=sharing' },
+];
+
+export function getDocuments(level, grade, subject, category) {
+  return DOCUMENTS.filter(
+    d => d.level === level && d.grade === grade && d.subject === subject && d.category === category
+  );
+}
+
+export function getFileId(link) {
+  const m = link.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  return m ? m[1] : null;
+}
+
+export function previewUrl(link) {
+  const id = getFileId(link);
+  return id ? `https://drive.google.com/file/d/${id}/preview` : link;
+}
+
+export function downloadUrl(link) {
+  const id = getFileId(link);
+  return id ? `https://drive.google.com/uc?export=download&id=${id}` : link;
+}
