@@ -37,6 +37,7 @@ function LevelCards({ onOpenLevel }) {
   const extraLevels = [
     { id:'exam-revision',     biIcon:'bi-trophy-fill',     color:'lc-coral', title:'Exam Revision',     desc:'KCPE · KPSEA · KJSEA · KCSE — past papers, mocks and marking schemes.',    count:'4 national exams' },
     { id:'teacher-resources', biIcon:'bi-person-video3',   color:'lc-teal',  title:'Teacher Resources', desc:'Schemes of work, lesson plans, rubrics and KICD syllabus for all levels.',  count:'5 level categories' },
+    { id:'lesson-plans', biIcon:'bi-person-video3',   color:'lc-blue',  title:'Lesson Plans', desc:'Ready-to-use lesson plans with objectives, activities and assessments.',  count:'5 level categories' },
   ];
 
   const Card = ({ level }) => (

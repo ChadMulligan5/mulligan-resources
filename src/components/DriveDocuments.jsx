@@ -352,7 +352,7 @@ export function DriveCategoryPanel({ subjectFolderId, subjectName, gradeName, on
     <div className="empty-state">
       <div className="es-icon">📁</div>
       <div className="es-title">No categories found</div>
-      <div className="es-desc">Create subfolders (e.g. "Notes & Summaries") inside this subject folder on Drive.</div>
+      <div className="es-desc">we're working on creating content for this subject.</div>
     </div>
   );
 

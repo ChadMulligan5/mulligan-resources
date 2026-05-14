@@ -12,7 +12,7 @@ const TYPE_ICON = {
 };
 
 const DOC_SCALE = 2;
-const TOOLBAR_BLOCK_HEIGHT = Math.ceil(60 * DOC_SCALE);
+const TOOLBAR_BLOCK_HEIGHT = Math.ceil(100 * DOC_SCALE);
 
 const S = {
   overlay: {
