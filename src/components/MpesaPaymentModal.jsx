@@ -402,12 +402,13 @@ function fakeCode() {
   return Array.from({ length: 10 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
 }
 
-export default function MpesaPaymentModal({ doc, onClose, onDownload }) {
-  const [stage, setStage]       = useState('prompt');    // 'prompt' | 'processing' | 'success'
+export default function MpesaPaymentModal({ doc, onClose }) {
+  const [stage, setStage]       = useState('prompt');    // 'prompt' | 'processing' | 'success' | 'downloading'
   const [phone, setPhone]       = useState('');
   const [focused, setFocused]   = useState(false);
   const [receipt, setReceipt]   = useState(null);
   const [dotIdx, setDotIdx]     = useState(0); // eslint-disable-line no-unused-vars
+  const [progress, setProgress] = useState(0); // 0–100
   const inputRef                = useRef(null);
 
   // Animate the waiting dots
@@ -416,6 +417,39 @@ export default function MpesaPaymentModal({ doc, onClose, onDownload }) {
     const id = setInterval(() => setDotIdx(i => (i + 1) % 3), 500);
     return () => clearInterval(id);
   }, [stage]);
+
+  // Animate circular progress, trigger download, then auto-close
+  useEffect(() => {
+    if (stage !== 'downloading') return;
+    setProgress(0);
+
+    // Trigger the actual file download silently in the background
+    const url = `https://drive.google.com/uc?export=download&id=${doc.id}`;
+    const fileName = doc.title || doc.name || 'document';
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Animate progress over ~2.5s then dismiss
+    let current = 0;
+    const id = setInterval(() => {
+      current += Math.random() * 18 + 6;
+      if (current >= 100) {
+        current = 100;
+        setProgress(100);
+        clearInterval(id);
+        setTimeout(() => onClose(), 600);
+      } else {
+        setProgress(Math.min(current, 100));
+      }
+    }, 120);
+
+    return () => clearInterval(id);
+  }, [stage]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Simulate STK push + payment confirmation
   function handlePay() {
@@ -599,7 +633,7 @@ export default function MpesaPaymentModal({ doc, onClose, onDownload }) {
               {/* Download button */}
               <button
                 style={S.btnDownload}
-                onClick={() => { onDownload(doc); onClose(); }}
+                onClick={() => setStage('downloading')}
               >
                 <i className="bi bi-download" />
                 Download {docType}
@@ -608,6 +642,73 @@ export default function MpesaPaymentModal({ doc, onClose, onDownload }) {
               <button style={S.btnClose} onClick={onClose}>
                 Close
               </button>
+            </div>
+          )}
+
+          {/* ══════════════ DOWNLOADING STAGE ══════════════ */}
+          {stage === 'downloading' && (
+            <div style={S.processingWrap}>
+
+              {/* Circular progress ring */}
+              <div style={{ position:'relative', width:90, height:90 }}>
+                <svg width="90" height="90" style={{ transform:'rotate(-90deg)' }}>
+                  {/* Track */}
+                  <circle
+                    cx="45" cy="45" r="38"
+                    fill="none"
+                    stroke="rgba(212,168,67,.12)"
+                    strokeWidth="6"
+                  />
+                  {/* Progress arc */}
+                  <circle
+                    cx="45" cy="45" r="38"
+                    fill="none"
+                    stroke="#D4A843"
+                    strokeWidth="6"
+                    strokeLinecap="round"
+                    strokeDasharray={`${2 * Math.PI * 38}`}
+                    strokeDashoffset={`${2 * Math.PI * 38 * (1 - progress / 100)}`}
+                    style={{ transition:'stroke-dashoffset .12s ease' }}
+                  />
+                </svg>
+                {/* Percentage in centre */}
+                <div style={{
+                  position:'absolute', inset:0,
+                  display:'flex', alignItems:'center', justifyContent:'center',
+                  flexDirection:'column', gap:1,
+                }}>
+                  {progress < 100
+                    ? <span style={{ fontSize:18, fontWeight:800, color:'#D4A843', fontFamily:"'DM Sans',sans-serif" }}>{Math.round(progress)}%</span>
+                    : <span style={{ fontSize:26 }}>✓</span>
+                  }
+                </div>
+              </div>
+
+              <div style={S.processingTitle}>
+                {progress < 100 ? 'Downloading…' : 'Complete!'}
+              </div>
+              <div style={S.processingDesc}>
+                {progress < 100
+                  ? `Saving ${docName} to your device.`
+                  : 'Your file has been saved. This window will close shortly.'
+                }
+              </div>
+
+              {/* Linear progress bar underneath */}
+              <div style={{
+                width:'100%', height:4,
+                background:'rgba(212,168,67,.12)',
+                borderRadius:4, overflow:'hidden',
+              }}>
+                <div style={{
+                  height:'100%',
+                  width:`${progress}%`,
+                  background:'linear-gradient(90deg,#D4A843,#C8932A)',
+                  borderRadius:4,
+                  transition:'width .12s ease',
+                }} />
+              </div>
+
             </div>
           )}
 

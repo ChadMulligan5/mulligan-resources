@@ -203,17 +203,7 @@ function DriveFileList({ folderId, onOpenDoc }) {
       .catch(e => { setError(e.message); setLoading(false); });
   }, [folderId]);
 
-  function handleDownload(paidDoc) {
-    const url = `https://drive.google.com/uc?export=download&id=${paidDoc.id}`;
-    const fileName = paidDoc.title || paidDoc.name || 'document';
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = fileName;
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
+  // Download is now handled internally by MpesaPaymentModal during the 'downloading' stage
 
   if (loading) return <Spinner text="Loading documents…" />;
   if (error)   return <ErrorBox message={error} />;
@@ -319,7 +309,6 @@ function DriveFileList({ folderId, onOpenDoc }) {
         <MpesaPaymentModal
           doc={payingDoc}
           onClose={() => setPayingDoc(null)}
-          onDownload={(paidDoc) => { handleDownload(paidDoc); setPayingDoc(null); }}
         />
       )}
     </>

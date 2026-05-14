@@ -216,19 +216,7 @@ export default function DocModal({ doc, onClose }) {
   }
 
   // Called by MpesaPaymentModal after confirmed payment
-  function handleDownload(paidDoc) {
-    // TODO: replace URL with your actual signed/gated download URL
-    const url = `https://drive.google.com/uc?export=download&id=${paidDoc.id}`;
-    const fileName = paidDoc.title || paidDoc.name || 'document';
-
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = fileName;
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
+  // Download is now handled internally by MpesaPaymentModal during the 'downloading' stage
 
   const iframeStyle = {
     width: `${(1 / DOC_SCALE) * 100}%`,
@@ -324,7 +312,6 @@ export default function DocModal({ doc, onClose }) {
         <MpesaPaymentModal
           doc={doc}
           onClose={() => setShowPayment(false)}
-          onDownload={handleDownload}
         />
       )}
     </>

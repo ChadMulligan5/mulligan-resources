@@ -148,17 +148,7 @@ function DocumentsPanel({ levelId, grade, subject, category, onOpenDoc }) {
   const free = docs.filter(d => d.free);
   const prem = docs.filter(d => !d.free);
 
-  function handleDownload(paidDoc) {
-    const url = `https://drive.google.com/uc?export=download&id=${paidDoc.id || paidDoc.driveLink}`;
-    const fileName = paidDoc.title || paidDoc.name || 'document';
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = fileName;
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
+  // Download is now handled internally by MpesaPaymentModal during the 'downloading' stage
 
   const DocCard = ({ doc }) => (
     <div className="doc-card" onClick={() => onOpenDoc(doc)}>
@@ -223,7 +213,6 @@ function DocumentsPanel({ levelId, grade, subject, category, onOpenDoc }) {
         <MpesaPaymentModal
           doc={payingDoc}
           onClose={() => setPayingDoc(null)}
-          onDownload={(paidDoc) => { handleDownload(paidDoc); setPayingDoc(null); }}
         />
       )}
     </>
