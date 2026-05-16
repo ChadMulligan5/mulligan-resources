@@ -352,7 +352,7 @@ export function DriveCategoryPanel({ subjectFolderId, subjectName, gradeName, on
     <div className="empty-state">
       <div className="es-icon">📁</div>
       <div className="es-title">No categories found</div>
-      <div className="es-desc">we're working on creating content for this subject.</div>
+      <div className="es-desc">We're working on creating content for this subject.</div>
     </div>
   );
 
@@ -415,7 +415,7 @@ export function DriveSubjectPanel({ gradeFolderId, gradeName, onBack, onOpenDoc 
     <div className="empty-state">
       <div className="es-icon">📁</div>
       <div className="es-title">No subjects found</div>
-      <div className="es-desc">We are working on creating materials for {gradeName}. Thank you for your patience.</div>
+      <div className="es-desc">We're working on creating materials for {gradeName}. Thank you for your patience.</div>
     </div>
   );
 
