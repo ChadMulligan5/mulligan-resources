@@ -54,21 +54,10 @@ export const LEVELS = {
   'exam-revision': {
     label: 'Exam Revision', icon: '🏆', color: 'lc-coral',
     grades: [
-      { id:'kcpe',  num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:30,flexShrink:0}}></i>, label:'KCPE',  age:'Primary Exit Exam', driveId:'1YcRs0GDdYu5nzXDsPQcU-7YBPUF60bwn',  subjects:['English','Kiswahili','Mathematics','Science','Social Studies & CRE'] },
+      { id:'allgrades',  num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:30,flexShrink:0}}></i>, label:'All Grades',  age:'Primary Exit Exam', driveId:'1YcRs0GDdYu5nzXDsPQcU-7YBPUF60bwn',  subjects:['English','Kiswahili','Mathematics','Science','Social Studies & CRE'] },
       { id:'kpsea', num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:30,flexShrink:0}}></i>, label:'KPSEA', age:'Grade 6 Exit Exam', driveId:'1268zQYpP0aXQm5jeWJJhbFTezOQKwXQB',  subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Creative Arts','Physical & Health Education'] },
       { id:'kjsea', num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:30,flexShrink:0}}></i>, label:'KJSEA', age:'Grade 9 Exit Exam', driveId:'1mmML5c8CJC-RYbDCgYNS7DDj8e6EuTMb',  subjects:['English','Kiswahili','Mathematics','Integrated Science','Social Studies','Business Studies','Agriculture','Computer Science','Creative Arts','Physical Education'] },
       { id:'kcse',  num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:30,flexShrink:0}}></i>, label:'KCSE',  age:'Secondary Exit Exam', driveId:'1iXJW8CmNDKWNLQ39H9tCt-D4wmVowJfX', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Studies'] },
-    ],
-  },
-  'teacher-resources': {
-    label: 'Teacher Resources', icon: '👩‍🏫', color: 'lc-teal',
-    grades: [
-      { id:'tr-pp', num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:35,flexShrink:0}}></i>, label:'Pre-Primary',      age:'PP1 & PP2',   driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','Activity Sheets','KICD Syllabus'] },
-      { id:'tr-lp', num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:35,flexShrink:0}}></i>, label:'Lower Primary',    age:'Grade 1–3',   driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','Activity Sheets','KICD Syllabus','Record of Work'] },
-      { id:'tr-up', num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:35,flexShrink:0}}></i>, label:'Upper Primary',    age:'Grade 4–6',   driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','Homework Sheets','KICD Syllabus','Record of Work'] },
-      { id:'tr-js', num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:35,flexShrink:0}}></i>, label:'Junior Secondary', age:'Grade 7–9',   driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','CAT Papers','KICD Syllabus','Record of Work','Remedial Activities'] },
-      { id:'tr-ss', num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:35,flexShrink:0}}></i>, label:'Senior School',      age:'Grade 10–12', driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','CAT Papers','KICD Syllabus','Record of Work','KCSE Prediction Papers'] },
-      { id:'tr-os', num:<i className="bi bi-journal-bookmark-fill" style={{fontSize:35,flexShrink:0}}></i>, label:'8.4.4',      age:'Form 3–4', driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','CAT Papers','KICD Syllabus','Record of Work','KCSE Prediction Papers'] },
     ],
   },
   'schemes-of-work': {

@@ -30,7 +30,7 @@ export function MobileDrawer({ open, onClose, onOpenLevel }) {
             { id:'junior-secondary',  label:'Junior Secondary',  badge:'G7–G9' },
             { id:'senior-school',     label:'Senior School',     badge:'G10–G12' },
             { id:'old-school',        label:'8.4.4',             badge:'F3–F4' },
-            { id:'exam-revision',     label:'Exam Revision',     badge:'KCSE' },
+            { id:'exam-revision',     label:'Exam Revision',     badge:'All' },
 
           ].map(item => (
             <button key={item.id} className="sidebar-link" onClick={() => { onClose(); onOpenLevel(item.id); }}>

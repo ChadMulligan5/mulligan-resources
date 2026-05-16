@@ -36,9 +36,10 @@ function LevelCards({ onOpenLevel }) {
     { id:'old-school',       biIcon:'bi-building-fill',   color:'lc-purple', title:'8.4.4',            desc:'Grade 10–12 · Ages 16–18. Specialised tracks: Arts, STEM & TVET.',         count:'12 subjects' },
   ];
   const extraLevels = [
-    { id:'exam-revision',     biIcon:'bi-trophy-fill',     color:'lc-coral', title:'Exam Revision',     desc:'KCPE · KPSEA · KJSEA · KCSE — past papers, mocks and marking schemes.',    count:'4 national exams' },
-    { id:'teacher-resources', biIcon:'bi-person-video3',   color:'lc-teal',  title:'Teacher Resources', desc:'Schemes of work, lesson plans, rubrics and KICD syllabus for all levels.',  count:'5 level categories' },
-    { id:'lesson-plans', biIcon:'bi-person-video3',   color:'lc-blue',  title:'Lesson Plans', desc:'Ready-to-use lesson plans with objectives, activities and assessments.',  count:'5 level categories' },
+    { id:'exam-revision',     biIcon:'bi-trophy-fill',     color:'lc-coral', title:'Exam Revision',     desc:'All Grades · KCPE · KPSEA · KJSEA · KCSE — past papers, mocks and marking schemes.',    count:'4 national exams' },
+    { id:'schemes-of-work',   biIcon:'bi-journal-bookmark-fill', color:'lc-teal',  title:'Schemes of Work',   desc:'Comprehensive schemes of work for all levels.',  count:'5 level categories' },
+    { id:'lesson-plans',      biIcon:'bi-file-earmark-text-fill', color:'lc-blue',  title:'Lesson Plans',      desc:'Ready-to-use lesson plans with objectives, activities and assessments.',  count:'5 level categories' },
+    { id:'kicd-syllabus',     biIcon:'bi-journal-bookmark-fill', color:'lc-purple', title:'KICD Syllabus',     desc:'Official KICD syllabus for all levels.',  count:'5 level categories' },
   ];
 
   const Card = ({ level }) => (
