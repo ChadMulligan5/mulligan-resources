@@ -1,16 +1,20 @@
 import React from 'react';
+import './Topbar.css';
 
 export default function Topbar({ onHamburger, onMobSearch }) {
   return (
     <header className="topbar">
+
+      {/* ── Logo ── */}
       <a href="/" className="logo">
         <div className="logo-icon">M</div>
-        <div>
+        <div className="logo-text-wrap">
           <div className="logo-text">Mulligan Resource Center</div>
           <div className="logo-sub">Kenya CBE Platform</div>
         </div>
       </a>
 
+      {/* ── Desktop search bar (hidden on mobile) ── */}
       <div className="topbar-center">
         <div className="search-wrap">
           <svg className="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -20,20 +24,27 @@ export default function Topbar({ onHamburger, onMobSearch }) {
         </div>
       </div>
 
+      {/* ── Right controls ── */}
       <div className="topbar-right">
-        {/* Mobile only */}
+
+        {/* Mobile: search → avatar → hamburger */}
         <button className="mob-search-btn" onClick={onMobSearch} aria-label="Search">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </button>
+
+        <div className="avatar mob-avatar">JM</div>
+
         <button className="hamburger-btn" onClick={onHamburger} aria-label="Menu">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
         </button>
 
-        {/* Desktop */}
+        {/* Desktop only */}
         <button className="nav-link">Browse</button>
         <button className="nav-link">Subjects</button>
         <button className="nav-link">Exams</button>
@@ -52,6 +63,7 @@ export default function Topbar({ onHamburger, onMobSearch }) {
           </svg>
           Sign In
         </button>
+
       </div>
     </header>
   );

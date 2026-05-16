@@ -1,0 +1,95 @@
+/* ── Topbar mobile reorganization ─────────────────────────────── */
+
+/* Keep logo on one line; let text shrink if needed */
+.logo {
+  min-width: 0;          /* allow flex shrink */
+  flex-shrink: 1;
+}
+
+.logo-text-wrap {
+  min-width: 0;
+}
+
+.logo-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logo-sub {
+  white-space: nowrap;
+}
+
+/* Mobile avatar — shown only on mobile between search & hamburger */
+.mob-avatar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .topbar {
+    padding: 0 14px;
+    height: 52px;         /* tighter than desktop — was likely ~60-64px */
+    gap: 0;
+  }
+
+  /* Single-row logo: icon + text side by side, no wrapping */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    font-size: 13px;      /* fits on one line at 375px+ */
+    line-height: 1.2;
+  }
+
+  .logo-sub {
+    font-size: 9px;
+    margin-top: 1px;
+  }
+
+  /* Hide desktop search bar */
+  .topbar-center {
+    display: none;
+  }
+
+  /* Right cluster: tighten gaps, show mobile avatar */
+  .topbar-right {
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  /* Show avatar between search and hamburger on mobile */
+  .mob-avatar {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  /* Hide desktop-only elements */
+  .nav-link,
+  .notif-btn,
+  .btn-primary,
+  .topbar-right .avatar:not(.mob-avatar) {
+    display: none !important;
+  }
+
+  /* Slightly smaller icon buttons */
+  .mob-search-btn,
+  .hamburger-btn {
+    width: 32px;
+    height: 32px;
+  }
+}
