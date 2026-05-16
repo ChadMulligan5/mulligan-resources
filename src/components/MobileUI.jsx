@@ -9,8 +9,8 @@ export function MobileDrawer({ open, onClose, onOpenLevel }) {
           <a href="/" className="logo">
             <div className="logo-icon">M</div>
             <div>
-              <div className="logo-text" style={{fontSize:15}}>Mulligan RC</div>
-              <div className="logo-sub">Kenya CBE Platform</div>
+              <div className="logo-text" style={{fontSize:15}}>Mulligan Resources</div>
+              <div className="logo-sub">Kenya C.B.E Platform</div>
             </div>
           </a>
           <button className="drawer-close" onClick={onClose}>✕</button>
@@ -24,17 +24,31 @@ export function MobileDrawer({ open, onClose, onOpenLevel }) {
 
           <div className="sidebar-title" style={{padding:'12px 20px 8px'}}>CBE Levels</div>
           {[
-            { id:'pre-primary',      label:'Pre-Primary',      badge:'PP1–PP2' },
-            { id:'lower-primary',    label:'Lower Primary',    badge:'G1–G3' },
-            { id:'upper-primary',    label:'Upper Primary',    badge:'G4–G6' },
-            { id:'junior-secondary', label:'Junior Secondary', badge:'G7–G9' },
-            { id:'senior-school',      label:'Senior School',      badge:'G10–G12' },
-            { id:'old-school',       label:'8.4.4',            badge:'F3–F4' },
-            { id:'exam-revision',    label:'Exam Revision',    badge:'KCSE' },
-            { id:'teacher-resources',label:'Teacher Resources',badge:'New', badgeClass:'new' },
+            { id:'pre-primary',       label:'Pre-Primary',       badge:'PP1–PP2' },
+            { id:'lower-primary',     label:'Lower Primary',     badge:'G1–G3' },
+            { id:'upper-primary',     label:'Upper Primary',     badge:'G4–G6' },
+            { id:'junior-secondary',  label:'Junior Secondary',  badge:'G7–G9' },
+            { id:'senior-school',     label:'Senior School',     badge:'G10–G12' },
+            { id:'old-school',        label:'8.4.4',             badge:'F3–F4' },
+            { id:'exam-revision',     label:'Exam Revision',     badge:'KCSE' },
+
           ].map(item => (
             <button key={item.id} className="sidebar-link" onClick={() => { onClose(); onOpenLevel(item.id); }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              <i className="bi bi-mortarboard-fill" style={{fontSize:16}}></i>
+              {item.label}
+              <span className={`sidebar-badge${item.badgeClass ? ` ${item.badgeClass}` : ''}`}>{item.badge}</span>
+            </button>
+          ))}
+
+          <div className="sidebar-title" style={{padding:'12px 20px 8px'}}>For Teachers</div>
+          {[
+            { id:'teacher-resources', label:'Teacher Resources', badge:'New', badgeClass:'new' },
+            { id:'schemes-of-work', label:'Schemes of Work', badge:'New', badgeClass:'new' },
+            { id:'lesson-plans', label:'Lesson Plans', badge:'New', badgeClass:'new' },
+            { id:'kicd-syllabus', label:'KICD Syllabus', badge:'New', badgeClass:'new' },
+          ].map(item => (
+            <button key={item.id} className="sidebar-link" onClick={() => { onClose(); onOpenLevel(item.id); }}>
+              <i className="bi bi-mortarboard-fill" style={{fontSize:16}}></i>
               {item.label}
               <span className={`sidebar-badge${item.badgeClass ? ` ${item.badgeClass}` : ''}`}>{item.badge}</span>
             </button>
@@ -67,7 +81,7 @@ export function MobileSearch({ open, onClose, onOpenLevel }) {
           { id:'upper-primary',    emoji:'📘', label:'Upper Primary Materials' },
           { id:'exam-revision',    emoji:'🏆', label:'KCPE & KCSE Past Papers' },
           { id:'junior-secondary', emoji:'📙', label:'Junior Secondary Notes' },
-          { id:'senior-school',      emoji:'📓', label:'Senior School Resources' },
+          { id:'senior-school',    emoji:'📓', label:'Senior School Resources' },
           { id:'old-school',       emoji:'📓', label:'8.4.4 Resources' },
         ].map(h => (
           <div key={h.id} className="mob-hint" onClick={() => { onClose(); onOpenLevel(h.id); }}>

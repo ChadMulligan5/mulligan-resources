@@ -66,15 +66,15 @@ export default function Sidebar({ onOpenLevel }) {
           Teacher Resources
           <span className="sidebar-badge new">New</span>
         </button>
-        <button className="sidebar-link">
+        <button className="sidebar-link" onClick={() => onOpenLevel('schemes-of-work')}>
           <i className="bi bi-calendar3-week-fill" style={{fontSize:15,flexShrink:0}}></i>
           Schemes of Work
         </button>
-        <button className="sidebar-link">
+        <button className="sidebar-link" onClick={() => onOpenLevel('lesson-plans')}>
           <i className="bi bi-file-earmark-text-fill" style={{fontSize:15,flexShrink:0}}></i>
           Lesson Plans
         </button>
-        <button className="sidebar-link">
+        <button className="sidebar-link" onClick={() => onOpenLevel('kicd-syllabus')}>
           <i className="bi bi-journal-bookmark-fill" style={{fontSize:15,flexShrink:0}}></i>
           KICD Syllabus
         </button>
