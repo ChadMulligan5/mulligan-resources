@@ -42,7 +42,6 @@ export function MobileDrawer({ open, onClose, onOpenLevel }) {
 
           <div className="sidebar-title" style={{padding:'12px 20px 8px'}}>For Teachers</div>
           {[
-            { id:'teacher-resources', label:'Teacher Resources', badge:'New', badgeClass:'new' },
             { id:'schemes-of-work', label:'Schemes of Work', badge:'New', badgeClass:'new' },
             { id:'lesson-plans', label:'Lesson Plans', badge:'New', badgeClass:'new' },
             { id:'kicd-syllabus', label:'KICD Syllabus', badge:'New', badgeClass:'new' },
