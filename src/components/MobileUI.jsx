@@ -24,11 +24,12 @@ export function MobileDrawer({ open, onClose, onOpenLevel }) {
 
           <div className="sidebar-title" style={{padding:'12px 20px 8px'}}>CBE Levels</div>
           {[
-            { id:'pre-primary',      label:'Pre-Primary',      badge:'PP1–2' },
-            { id:'lower-primary',    label:'Lower Primary',    badge:'G1–3' },
-            { id:'upper-primary',    label:'Upper Primary',    badge:'G4–6' },
-            { id:'junior-secondary', label:'Junior Secondary', badge:'G7–9' },
-            { id:'high-school',      label:'High School',      badge:'G10–12' },
+            { id:'pre-primary',      label:'Pre-Primary',      badge:'PP1–PP2' },
+            { id:'lower-primary',    label:'Lower Primary',    badge:'G1–G3' },
+            { id:'upper-primary',    label:'Upper Primary',    badge:'G4–G6' },
+            { id:'junior-secondary', label:'Junior Secondary', badge:'G7–G9' },
+            { id:'senior-school',      label:'Senior School',      badge:'G10–G12' },
+            { id:'old-school',       label:'8.4.4',            badge:'F3–F4' },
             { id:'exam-revision',    label:'Exam Revision',    badge:'KCSE' },
             { id:'teacher-resources',label:'Teacher Resources',badge:'New', badgeClass:'new' },
           ].map(item => (
@@ -66,7 +67,8 @@ export function MobileSearch({ open, onClose, onOpenLevel }) {
           { id:'upper-primary',    emoji:'📘', label:'Upper Primary Materials' },
           { id:'exam-revision',    emoji:'🏆', label:'KCPE & KCSE Past Papers' },
           { id:'junior-secondary', emoji:'📙', label:'Junior Secondary Notes' },
-          { id:'high-school',      emoji:'📓', label:'High School Resources' },
+          { id:'senior-school',      emoji:'📓', label:'Senior School Resources' },
+          { id:'old-school',       emoji:'📓', label:'8.4.4 Resources' },
         ].map(h => (
           <div key={h.id} className="mob-hint" onClick={() => { onClose(); onOpenLevel(h.id); }}>
             <span style={{fontSize:18}}>{h.emoji}</span> {h.label}

@@ -41,9 +41,14 @@ export default function Sidebar({ onOpenLevel }) {
           Junior Secondary
           <span className="sidebar-badge">G7–9</span>
         </button>
-        <button className="sidebar-link" onClick={() => onOpenLevel('high-school')}>
+        <button className="sidebar-link" onClick={() => onOpenLevel('senior-school')}>
           <i className="bi bi-building-fill" style={{fontSize:15,flexShrink:0}}></i>
-          High School
+          Senior School
+          <span className="sidebar-badge">G10–12</span>
+        </button>
+        <button className="sidebar-link" onClick={() => onOpenLevel('old-school')}>
+          <i className="bi bi-book-fill" style={{fontSize:15,flexShrink:0}}></i>
+          8.4.4
           <span className="sidebar-badge">G10–12</span>
         </button>
         <button className="sidebar-link" onClick={() => onOpenLevel('exam-revision')}>

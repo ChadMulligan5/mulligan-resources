@@ -61,7 +61,7 @@ function ErrorBox({ message }) {
     <div style={{ padding:16, background:'rgba(232,96,96,.08)', border:'1px solid rgba(232,96,96,.2)', borderRadius:10, color:'#E86060', fontSize:13 }}>
       <i className="bi bi-exclamation-triangle-fill"></i> {message}
       <div style={{ marginTop:6, fontSize:11, color:'var(--tm)' }}>
-        Make sure the folder is shared as "Anyone with the link" on Google Drive.
+        Make sure the folder is shared as "Anyone with the link" on G drive server.
       </div>
     </div>
   );
@@ -409,13 +409,13 @@ export function DriveSubjectPanel({ gradeFolderId, gradeName, onBack, onOpenDoc 
     );
   }
 
-  if (loading) return <Spinner text="Fetching subjects from Google Drive…" />;
+  if (loading) return <Spinner text="Loading subjects …" />;
   if (error)   return <ErrorBox message={error} />;
   if (subjects.length === 0) return (
     <div className="empty-state">
       <div className="es-icon">📁</div>
       <div className="es-title">No subjects found</div>
-      <div className="es-desc">Create subject folders inside {gradeName} on Google Drive.</div>
+      <div className="es-desc">We are working on creating materials for {gradeName}. Thank you for your patience.</div>
     </div>
   );
 

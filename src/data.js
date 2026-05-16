@@ -7,24 +7,24 @@ export const LEVELS = {
   'pre-primary': {
     label: 'Pre-Primary', icon: '🌟', color: 'lc-pink',
     grades: [
-      { id:'pp1', num:'PP1', label:'Pre-Primary 1', age:'Age 4–5', driveId:'1Vz0k6AhnTaAhJJsostNFGVDGFXjkttLH', subjects:['Mathematical Activities','Language Activities','Environmental Activities','Psychomotor & Creative Activities','Religious Education & Life Skills','Digital Literacy'] },
-      { id:'pp2', num:'PP2', label:'Pre-Primary 2', age:'Age 5–6', driveId:'1dTc2_ZOKtDs8JKqJEkNElcWACYFu1VYo', subjects:['Mathematical Activities','Language Activities','Environmental Activities','Psychomotor & Creative Activities','Religious Education & Life Skills','Digital Literacy'] },
+      { id:'pp1', num:'PP1', label:'Pre-Primary 1', age:'Notes and Past papers', driveId:'1Vz0k6AhnTaAhJJsostNFGVDGFXjkttLH', subjects:['Mathematical Activities','Language Activities','Environmental Activities','Psychomotor & Creative Activities','Religious Education & Life Skills','Digital Literacy'] },
+      { id:'pp2', num:'PP2', label:'Pre-Primary 2', age:'Notes and Past papers', driveId:'1dTc2_ZOKtDs8JKqJEkNElcWACYFu1VYo', subjects:['Mathematical Activities','Language Activities','Environmental Activities','Psychomotor & Creative Activities','Religious Education & Life Skills','Digital Literacy'] },
     ],
   },
   'lower-primary': {
     label: 'Lower Primary', icon: '📗', color: 'lc-green',
     grades: [
-      { id:'g1', num:'G 1', label:'Grade 1', age:'Age 6–7', driveId:'13q0l1ryu7xUPu9_bT-vRzt8BYkVW4p7J', subjects:['Literacy Activities','Kiswahili Language Activities','Mathematical Activities','Environmental Activities','Creative Arts','Religious Education'] },
-      { id:'g2', num:'G 2', label:'Grade 2', age:'Age 7–8', driveId:'1GSHaVDWdZw1Yp3pXp73-9VyEwmZrhK9X', subjects:['Literacy Activities','Kiswahili Language Activities','Mathematical Activities','Environmental Activities','Creative Arts','Religious Education'] },
-      { id:'g3', num:'G 3', label:'Grade 3', age:'Age 8–9', driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY', subjects:['Literacy Activities','Kiswahili Language Activities','Mathematical Activities','Environmental Activities','Creative Arts','Religious Education'] },
+      { id:'g1', num:'G 1', label:'Grade 1', age:'Notes and Past papers', driveId:'13q0l1ryu7xUPu9_bT-vRzt8BYkVW4p7J', subjects:['Literacy Activities','Kiswahili Language Activities','Mathematical Activities','Environmental Activities','Creative Arts','Religious Education'] },
+      { id:'g2', num:'G 2', label:'Grade 2', age:'Notes and Past papers', driveId:'1GSHaVDWdZw1Yp3pXp73-9VyEwmZrhK9X', subjects:['Literacy Activities','Kiswahili Language Activities','Mathematical Activities','Environmental Activities','Creative Arts','Religious Education'] },
+      { id:'g3', num:'G 3', label:'Grade 3', age:'Notes and Past papers', driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY', subjects:['Literacy Activities','Kiswahili Language Activities','Mathematical Activities','Environmental Activities','Creative Arts','Religious Education'] },
     ],
   },
   'upper-primary': {
     label: 'Upper Primary', icon: '📘', color: 'lc-blue',
     grades: [
-      { id:'g4', num:'G 4', label:'Grade 4', age:'Age 10–11', driveId:'1Y1n-B5fg2IdJgmZykfRNSzbu4iPQR8qE', subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Religious Education','Creative Arts','Physical & Health Education'] },
-      { id:'g5', num:'G 5', label:'Grade 5', age:'Age 11–12', driveId:'1YigB_gRjvWKXDRkqR1BeiVK_2wUOLzP5', subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Religious Education','Creative Arts','Physical & Health Education'] },
-      { id:'g6', num:'G 6', label:'Grade 6', age:'Age 12–13', driveId:'1EaMELv3FUrH8TDNnKEmGMQd3veTTLR4j', subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Religious Education','Creative Arts','Physical & Health Education'] },
+      { id:'g4', num:'G 4', label:'Grade 4', age:'Notes and Past papers', driveId:'1Y1n-B5fg2IdJgmZykfRNSzbu4iPQR8qE', subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Religious Education','Creative Arts','Physical & Health Education'] },
+      { id:'g5', num:'G 5', label:'Grade 5', age:'Notes and Past papers', driveId:'1YigB_gRjvWKXDRkqR1BeiVK_2wUOLzP5', subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Religious Education','Creative Arts','Physical & Health Education'] },
+      { id:'g6', num:'G 6', label:'Grade 6', age:'Notes and Past papers', driveId:'1EaMELv3FUrH8TDNnKEmGMQd3veTTLR4j', subjects:['English','Kiswahili','Mathematics','Science & Technology','Social Studies','Religious Education','Creative Arts','Physical & Health Education'] },
     ],
   },
   'junior-secondary': {
@@ -35,12 +35,19 @@ export const LEVELS = {
       { id:'g9', num:'📚', label:'Grade 9', age:'Notes and Past papers', driveId:'16q-w9r1ehmIHacJ7GfRuLgetTqbgYLh9', subjects:['English','Kiswahili','Mathematics','Integrated Science','Social Studies','Business Studies','Agriculture','Computer Science','Creative Arts','Physical Education','Religious Education','Foreign Language'] },
     ],
   },
-  'high-school': {
-    label: 'High School', icon: '📓', color: 'lc-purple',
+  'senior-school': {
+    label: 'Senior School', icon: '📓', color: 'lc-purple',
     grades: [
-      { id:'g10', num:'G 10', label:'Grade 10', age:'Age 16–17', driveId:'13tl1nSZKC6nWBC0fQN5zExR0hg9pRvi-', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
-      { id:'g11', num:'G 11', label:'Grade 11', age:'Age 17–18', driveId:'10tgOnrs8wniBi1FdRZO5I8jHvNDQ5sEQ', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
-      { id:'g12', num:'G 12', label:'Grade 12', age:'Age 18–19', driveId:'12w9JkWnZONvB6aGAt5PkLchdaxlRYIWE', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
+      { id:'g10', num:'G 10', label:'Grade 10', age:'Notes and Past papers', driveId:'13tl1nSZKC6nWBC0fQN5zExR0hg9pRvi-', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
+      { id:'g11', num:'G 11', label:'Grade 11', age:'Notes and Past papers', driveId:'10tgOnrs8wniBi1FdRZO5I8jHvNDQ5sEQ', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
+      { id:'g12', num:'G 12', label:'Grade 12', age:'Notes and Past papers', driveId:'12w9JkWnZONvB6aGAt5PkLchdaxlRYIWE', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
+    ],
+  },
+  'old-school': {
+    label: '8.4.4', icon: '📓', color: 'lc-purple',
+    grades: [
+      { id:'f3', num:'F 3', label:'Form 3', age:'Notes and Past papers', driveId:'13tl1nSZKC6nWBC0fQN5zExR0hg9pRvi-', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
+      { id:'f4', num:'F 4', label:'Form 4', age:'Notes and Past papers', driveId:'10tgOnrs8wniBi1FdRZO5I8jHvNDQ5sEQ', subjects:['English','Kiswahili','Mathematics','Biology','Chemistry','Physics','History','Geography','Business Studies','Computer Science','Art & Design','Music'] },
     ],
   },
   'exam-revision': {
@@ -59,7 +66,7 @@ export const LEVELS = {
       { id:'tr-lp', num:'', label:'Lower Primary',    age:'Grade 1–3',   driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','Activity Sheets','KICD Syllabus','Record of Work'] },
       { id:'tr-up', num:'', label:'Upper Primary',    age:'Grade 4–6',   driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','Homework Sheets','KICD Syllabus','Record of Work'] },
       { id:'tr-js', num:'', label:'Junior Secondary', age:'Grade 7–9',   driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','CAT Papers','KICD Syllabus','Record of Work','Remedial Activities'] },
-      { id:'tr-ss', num:'', label:'High School',      age:'Grade 10–12', driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','CAT Papers','KICD Syllabus','Record of Work','KCSE Prediction Papers'] },
+      { id:'tr-ss', num:'', label:'Senior School',      age:'Grade 10–12', driveId:'1VgEYZGT2DIdnfMYI9S2luAblBUZs6tjY',  subjects:['Schemes of Work','Lesson Plans','Assessment Rubrics','CAT Papers','KICD Syllabus','Record of Work','KCSE Prediction Papers'] },
     ],
   },
   'lesson-plans': {

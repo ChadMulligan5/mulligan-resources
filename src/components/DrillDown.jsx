@@ -32,7 +32,8 @@ function LevelCards({ onOpenLevel }) {
     { id:'lower-primary',    biIcon:'bi-book-fill',       color:'lc-green',  title:'Lower Primary',    desc:'Grade 1–3 · Ages 6–9. Foundational literacy, numeracy and life skills.',   count:'6 subjects' },
     { id:'upper-primary',    biIcon:'bi-journals',        color:'lc-blue',   title:'Upper Primary',    desc:'Grade 4–6 · Ages 10–12. Expanding core subjects and practical skills.',    count:'8 subjects' },
     { id:'junior-secondary', biIcon:'bi-mortarboard-fill',color:'lc-gold',   title:'Junior Secondary', desc:'Grade 7–9 · Ages 13–15. Integrated subjects with career pathway options.',  count:'12 subjects' },
-    { id:'high-school',      biIcon:'bi-building-fill',   color:'lc-purple', title:'High School',      desc:'Grade 10–12 · Ages 16–18. Specialised tracks: Arts, STEM & TVET.',         count:'12 subjects' },
+    { id:'senior-school',      biIcon:'bi-building-fill',   color:'lc-purple', title:'Senior School',      desc:'Grade 10–12 · Ages 16–18. Specialised tracks: Arts, STEM & TVET.',         count:'12 subjects' },
+    { id:'old-school',       biIcon:'bi-building-fill',   color:'lc-purple', title:'8.4.4',            desc:'Grade 10–12 · Ages 16–18. Specialised tracks: Arts, STEM & TVET.',         count:'12 subjects' },
   ];
   const extraLevels = [
     { id:'exam-revision',     biIcon:'bi-trophy-fill',     color:'lc-coral', title:'Exam Revision',     desc:'KCPE · KPSEA · KJSEA · KCSE — past papers, mocks and marking schemes.',    count:'4 national exams' },
